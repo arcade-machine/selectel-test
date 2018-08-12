@@ -31,6 +31,7 @@ gulp.task("stylus", function () {
 
 gulp.task("pug", function buildHTML() {
    return gulp.src("source/pug/*.pug")
+       .pipe(plumber())
        .pipe(pug())
        .pipe(gulp.dest("source"))
 });

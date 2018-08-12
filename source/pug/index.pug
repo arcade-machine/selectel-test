@@ -5,13 +5,89 @@ html(lang = "ru")
     head
 
         meta(charset = "utf8")
+        meta(name = "viewport", content = "width=device-width,initial-scale=1")
 
         title Тестовое задание Selectel
 
-        link(type = "text/css", rel = "stylesheet", href = "/css/styles.min.css")
+        link(rel="preload" href="fonts/Roboto-Regular.woff2" as="font")
+        link(rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font")
+        link(rel="preload" href="fonts/Montserrat-Medium.woff2" as="font")
+        link(type = "text/css", rel = "stylesheet", href = "css/styles.min.css")
+        link(rel = "shortcut icon", type = "image/png", href = "img/favicon.png")
 
 
     body
         header(class = "main-header")
-        div(class = "wrapper-wrapper")
-            h1 hello
+            div(class = "main-header__wrapper")
+                nav(class = "main-header__navigation navigation")
+                    a(class = "navigation__link", href = "https://selectel.ru/", target = "_blank")
+                        img(class = "navigation__logo", src = "img/logo.svg", width = "113", height = "24")
+                    a(class = "navigation__phone", href = "tel:+7(800)555-06-75")
+                        img(src = "img/phone.svg", width = "22", height = "22")
+                        p +7 (800) 555-06-75
+                ul(class = "main-header__slider slider")
+                    li(class = "slider__item slider__item--current")
+                        h2 Надежное, безопасное, удобное хранилище ваших данных
+                        p Подходит для веб-приложений, хранения архивов, резервного копирования и раздачи статического контента.
+                    li(class = "slider__item")
+                        h2 Надежные серверы для проектов любой сложности
+                        p Выделенный сервер — это аренда сервера под задачи вашего проекта с возможностью свободно распоряжаться ресурсами машины и установки любого программного обеспечения.
+                    li(class = "slider__item")
+                        h2 Публичное облако на базе технологий VMware с оплатой по потреблению
+                        p Публичное облако на базе VMware позволяет быстро нарастить мощности вашего дата-центра без капитальных и организационных затрат с оплатой за потребляемые ресурсы.
+                    li(class = "slider__item")
+                        h2 Размещение серверного оборудования в дата‑центрах уровня надежности Tier III
+                        p Размещение серверного оборудования (колокейшн) в современном дата-центре с уровнем надежности Tier III с гарантированным каналом связи с высокой пропускной способностью, бесперебойным питанием и необходимым охлаждением.
+                a(class = "main-header__button button", href = "https://selectel.ru/", target = "_blank") Заказать
+        main(class = "main-content")
+            h3 Доступные конфигурации
+            ul(class = "main-content__configs")
+                li(class = "main-content__item card")
+                    ul(class = "card__list")
+                        li(class = "card__item")
+                            p Процессор
+                            p Intel Xeon E5-1650v4 3.6 ГГц
+                        li(class = "card__item")
+                            p Жетский диск
+                            p 512 ГБ
+                        li(class = "card__item")
+                            p Память
+                            p 128 ГБ
+                        li(class = "card__item")
+                            p Цена
+                            p 12 000 ₽/мес.
+                    a(class = "card__button button", href = "https://selectel.ru/", target = "_blank") Заказать
+        footer(class = "main-footer")
+            div(class = "main-footer__wrapper")
+                a(class = "main-footer__link", href = "https://selectel.ru/", target = "_blank")
+                    img(class = "main-footer__logo", src = "img/logo.svg", width = "113", height = "24")
+                ul(class = "main-footer__social social")
+                    li(class = "social__item")
+                        a(class = "social__link" href = "https://vk.com/selectel", target = "_blank")
+                            img(src = "img/vk.svg", width = "32", height = "18")
+                            p(class = "visually-hidden") Мы ВКонтакте
+                    li(class = "social__item")
+                        a(class = "social__link" href = "https://www.facebook.com/selectel/", target = "_blank")
+                            img(src = "img/facebook.svg", width = "11", height = "24")
+                            p(class = "visually-hidden") Мы в Facebook
+                    li(class = "social__item")
+                        a(class = "social__link" href = "https://twitter.com/selectel", target = "_blank")
+                            img(src = "img/twitter.svg", width = "28", height = "24")
+                            p(class = "visually-hidden") Мы в Twitter
+                    li(class = "social__item")
+                        a(class = "social__link" href = "https://habrahabr.ru/company/selectel/", target = "_blank")
+                            img(src = "img/habr.svg", width = "22", height = "24")
+                            p(class = "visually-hidden") Мы в Habrahabr
+                    li(class = "social__item")
+                        a(class = "social__link" href = "https://www.youtube.com/channel/UCVU0Ml1l_Y90wmy5EjWTSng", target = "_blank")
+                            img(src = "img/youtube.svg", width = "28", height = "20")
+                            p(class = "visually-hidden") Мы на Youtube
+                    li(class = "social__item")
+                        a(class = "social__link" href = "https://www.instagram.com/selectel.ru/", target = "_blank")
+                            img(src = "img/instagram.svg", width = "24", height = "24")
+                            p(class = "visually-hidden") Мы в Instagram
+    script(src = "js/script.js")
+
+
+
+
