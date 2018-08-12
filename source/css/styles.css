@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Roboto regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Roboto-Regular.woff") format(".woff"), url("../fonts/Roboto-Regular.woff2") format(".woff2");
+}
+@font-face {
+  font-family: "Montserrat Semibold";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montserrat-semibold-webfont.woff") format(".woff"), url("../fonts/montserrat-semibold-webfont.woff2") format(".woff2");
+}
+img {
+  max-width: 100%;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
