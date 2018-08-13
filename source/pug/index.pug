@@ -41,22 +41,9 @@ html(lang = "ru")
                 a(class = "main-header__button button", href = "https://selectel.ru/", target = "_blank") Заказать
         main(class = "main-content")
             h3 Доступные конфигурации
-            ul(class = "main-content__configs")
-                li(class = "main-content__item card")
-                    ul(class = "card__list")
-                        li(class = "card__item")
-                            p Процессор
-                            p Intel Xeon E5-1650v4 3.6 ГГц
-                        li(class = "card__item")
-                            p Жетский диск
-                            p 512 ГБ
-                        li(class = "card__item")
-                            p Память
-                            p 128 ГБ
-                        li(class = "card__item")
-                            p Цена
-                            p 12 000 ₽/мес.
-                    a(class = "card__button button", href = "https://selectel.ru/", target = "_blank") Заказать
+            div(class = "main-content__configs")
+                img(class = "config__loader", src = "img/loader.svg", width = "68", height = "68")
+
         footer(class = "main-footer")
             div(class = "main-footer__wrapper")
                 a(class = "main-footer__link", href = "https://selectel.ru/", target = "_blank")
@@ -86,6 +73,24 @@ html(lang = "ru")
                         a(class = "social__link" href = "https://www.instagram.com/selectel.ru/", target = "_blank")
                             img(src = "img/instagram.svg", width = "24", height = "24")
                             p(class = "visually-hidden") Мы в Instagram
+    template(id = "config-template", style = "display:none")
+        h2(class = "config__error") Ошибка соединения!
+        div(class = "config__card card")
+            ul(class = "card__list")
+                li(class = "card__item")
+                    p Процессор
+                    p(class = "card__cpu") Intel Xeon E5-1650v4 3.6 ГГц
+                li(class = "card__item")
+                    p Жетский диск
+                    p(class = "card__hdd") 512 ГБ
+                li(class = "card__item")
+                    p Память
+                    p(class = "card__ram") 128 ГБ
+                li(class = "card__item")
+                    p Цена
+                    p(class = "card__price") 12 000 ₽/мес.
+            a(class = "card__button button", href = "https://selectel.ru/", target = "_blank") Заказать
+
     script(src = "js/script.js")
 
 

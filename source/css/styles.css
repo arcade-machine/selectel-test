@@ -37,6 +37,13 @@ body {
   font-family: "Roboto Regular";
   font-size: 12px;
 }
+.config__loader {
+  margin: 0 auto;
+  display: block;
+}
+.config__error {
+  text-align: center;
+}
 .main-header {
   min-width: 320px;
   background: linear-gradient(180deg, #2f4966 0%, #34557c 100%);
@@ -131,6 +138,7 @@ body {
 }
 .card {
   padding: 24px;
+  margin-bottom: 16px;
   border: 2px solid rgba(0,0,0,0.8);
   border-radius: 8px;
 }
