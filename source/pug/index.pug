@@ -4,7 +4,7 @@ html(lang = "ru")
 
     head
 
-        meta(charset = "utf8")
+        meta(charset = "utf-8")
         meta(name = "viewport", content = "width=device-width,initial-scale=1")
 
         title Тестовое задание Selectel
@@ -15,13 +15,15 @@ html(lang = "ru")
         link(type = "text/css", rel = "stylesheet", href = "css/styles.min.css")
         link(rel = "shortcut icon", type = "image/png", href = "img/favicon.png")
 
+        script(src="js/svg4everybody.min.js")
+        script svg4everybody();
 
     body
         header(class = "main-header")
             div(class = "main-header__wrapper")
                 nav(class = "main-header__navigation navigation")
                     a(class = "navigation__link", href = "https://selectel.ru/", target = "_blank")
-                        img(class = "navigation__logo", src = "img/logo.svg", width = "113", height = "24")
+                        img(class = "navigation__logo", alt = "Selectel логотип", src = "img/logo.svg", width = "113", height = "24")
                     a(class = "navigation__phone", href = "tel:+7(800)555-06-75")
                         svg(class="navigation__phone-icon" width="22" height="22")
                             use(xlink:href="img/icons/sprite.svg#icon-phone")
@@ -64,36 +66,43 @@ html(lang = "ru")
                         p Память
                     li(class = "main-content__names-item main-content__names-item--price")
                         p Цена
-                img(class = "config__loader", src = "img//icons/icon-loader.svg", width = "68", height = "68")
+                svg(class="config__loader" width="68" height="68")
+                    use(xlink:href="img/icons/sprite.svg#icon-loader")
 
         footer(class = "main-footer")
             div(class = "main-footer__wrapper")
                 a(class = "main-footer__link", href = "https://selectel.ru/", target = "_blank")
-                    img(class = "main-footer__logo", src = "img/logo.svg", width = "113", height = "24")
+                    img(class = "main-footer__logo", src = "img/logo.svg", alt = "Selectel логотип", width = "113", height = "24")
                 ul(class = "main-footer__social social")
                     li(class = "social__item")
                         a(class = "social__link" href = "https://vk.com/selectel", target = "_blank")
-                            img(src = "img/icons/icon-vk.svg", width = "32", height = "18")
+                            svg(width="32" height="18")
+                                use(xlink:href="img/icons/sprite.svg#icon-vk")
                             p(class = "visually-hidden") Мы ВКонтакте
                     li(class = "social__item")
                         a(class = "social__link" href = "https://www.facebook.com/selectel/", target = "_blank")
-                            img(src = "img/icons/icon-facebook.svg", width = "11", height = "24")
+                            svg(width="11" height="24")
+                                use(xlink:href="img/icons/sprite.svg#icon-facebook")
                             p(class = "visually-hidden") Мы в Facebook
                     li(class = "social__item")
                         a(class = "social__link" href = "https://twitter.com/selectel", target = "_blank")
-                            img(src = "img/icons/icon-twitter.svg", width = "28", height = "24")
+                            svg(width="28" height="24")
+                                use(xlink:href="img/icons/sprite.svg#icon-twitter")
                             p(class = "visually-hidden") Мы в Twitter
                     li(class = "social__item")
                         a(class = "social__link" href = "https://habrahabr.ru/company/selectel/", target = "_blank")
-                            img(src = "img/icons/icon-habr.svg", width = "22", height = "24")
+                            svg(width="22" height="24")
+                                use(xlink:href="img/icons/sprite.svg#icon-habr")
                             p(class = "visually-hidden") Мы в Habrahabr
                     li(class = "social__item")
                         a(class = "social__link" href = "https://www.youtube.com/channel/UCVU0Ml1l_Y90wmy5EjWTSng", target = "_blank")
-                            img(src = "img/icons/icon-youtube.svg", width = "28", height = "20")
+                            svg(width="28" height="24")
+                                use(xlink:href="img/icons/sprite.svg#icon-youtube")
                             p(class = "visually-hidden") Мы на Youtube
                     li(class = "social__item")
                         a(class = "social__link" href = "https://www.instagram.com/selectel.ru/", target = "_blank")
-                            img(src = "img/icons/icon-instagram.svg", width = "24", height = "24")
+                            svg(width="24" height="24")
+                                use(xlink:href="img/icons/sprite.svg#icon-instagram")
                             p(class = "visually-hidden") Мы в Instagram
         template(id = "config-template", style = "display:none")
             h2(class = "config__error") Ошибка соединения!
