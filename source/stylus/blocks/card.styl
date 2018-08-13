@@ -4,6 +4,9 @@
   border 2px solid rgba(0, 0, 0, 0.8)
   border-radius 8px
 
+  &:last-child
+    margin-bottom 0
+
 .card__item
   margin-bottom 16px
 
@@ -21,3 +24,36 @@
   font-family "Roboto Regular", sans-serif, Arial
   font-size 18px
   color #000000
+
+@media (min-width: desktop)
+  .card
+    display flex
+
+  .card__list
+    width 100%
+    display flex
+    align-items center
+
+  .card__button
+    margin-left auto
+
+  .card__item
+    margin-bottom 0
+
+    &--cpu
+      width 19%
+      margin-right 79px
+
+    &--hdd
+      width 12%
+      margin-right 86px
+
+    &--ram
+      width 7%
+      margin-right 134px
+
+    &--price
+      width 22%
+
+    & p:first-child
+      display none

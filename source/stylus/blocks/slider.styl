@@ -1,15 +1,23 @@
 .slider
-  margin-bottom 32px
+  position relative
 
 .slider__item
-  display none
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.6s;
 
   &--current
-    display block
+    opacity: 1;
+    z-index: 2;
+
 
   & h2
     padding 0
     margin 0
+    margin-bottom 32px
     font-family "Montserrat Semibold"
     font-size 32px
     line-height 40px
@@ -18,3 +26,26 @@
 
   & p
     display none
+
+
+.slider__item .slider__button
+  display none
+
+.slider__item--current .slider__button
+  display inline-block
+
+@media (min-width: desktop)
+  .slider__item
+    & h2
+      width 66%
+      margin-bottom 40px
+      font-size 40px
+    & p
+      width 50%
+      padding 0
+      margin 0
+      margin-bottom 40px
+      font-family "Roboto Regular", sans-serif, Arial
+      font-size 16px
+      color #ffffff
+      display block

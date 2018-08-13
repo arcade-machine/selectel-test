@@ -12,10 +12,6 @@ const networkError = document.querySelector("#config-template")
 window.load = function() {
     const xhr = new XMLHttpRequest();
     xhr.responseType = "json";
-    
-    xhr.addEventListener("loading", function () {
-        configList.appendChild(loader);
-    });
 
     xhr.addEventListener("load", function () {
         if (xhr.status === 200) {
