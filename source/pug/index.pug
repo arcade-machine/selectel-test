@@ -23,7 +23,8 @@ html(lang = "ru")
                     a(class = "navigation__link", href = "https://selectel.ru/", target = "_blank")
                         img(class = "navigation__logo", src = "img/logo.svg", width = "113", height = "24")
                     a(class = "navigation__phone", href = "tel:+7(800)555-06-75")
-                        img(class = "navigation__phone-icon", src = "img/phone.svg", width = "22", height = "22")
+                        svg(class="navigation__phone-icon" width="22" height="22")
+                            use(xlink:href="img/icons/sprite.svg#icon-phone")
                         p +7 (800) 555-06-75
                 ul(class = "main-header__slider slider")
                     li(class = "slider__item slider__item--current")
@@ -63,7 +64,7 @@ html(lang = "ru")
                         p Память
                     li(class = "main-content__names-item main-content__names-item--price")
                         p Цена
-                img(class = "config__loader", src = "img/loader.svg", width = "68", height = "68")
+                img(class = "config__loader", src = "img//icons/icon-loader.svg", width = "68", height = "68")
 
         footer(class = "main-footer")
             div(class = "main-footer__wrapper")
@@ -72,48 +73,48 @@ html(lang = "ru")
                 ul(class = "main-footer__social social")
                     li(class = "social__item")
                         a(class = "social__link" href = "https://vk.com/selectel", target = "_blank")
-                            img(src = "img/vk.svg", width = "32", height = "18")
+                            img(src = "img/icons/icon-vk.svg", width = "32", height = "18")
                             p(class = "visually-hidden") Мы ВКонтакте
                     li(class = "social__item")
                         a(class = "social__link" href = "https://www.facebook.com/selectel/", target = "_blank")
-                            img(src = "img/facebook.svg", width = "11", height = "24")
+                            img(src = "img/icons/icon-facebook.svg", width = "11", height = "24")
                             p(class = "visually-hidden") Мы в Facebook
                     li(class = "social__item")
                         a(class = "social__link" href = "https://twitter.com/selectel", target = "_blank")
-                            img(src = "img/twitter.svg", width = "28", height = "24")
+                            img(src = "img/icons/icon-twitter.svg", width = "28", height = "24")
                             p(class = "visually-hidden") Мы в Twitter
                     li(class = "social__item")
                         a(class = "social__link" href = "https://habrahabr.ru/company/selectel/", target = "_blank")
-                            img(src = "img/habr.svg", width = "22", height = "24")
+                            img(src = "img/icons/icon-habr.svg", width = "22", height = "24")
                             p(class = "visually-hidden") Мы в Habrahabr
                     li(class = "social__item")
                         a(class = "social__link" href = "https://www.youtube.com/channel/UCVU0Ml1l_Y90wmy5EjWTSng", target = "_blank")
-                            img(src = "img/youtube.svg", width = "28", height = "20")
+                            img(src = "img/icons/icon-youtube.svg", width = "28", height = "20")
                             p(class = "visually-hidden") Мы на Youtube
                     li(class = "social__item")
                         a(class = "social__link" href = "https://www.instagram.com/selectel.ru/", target = "_blank")
-                            img(src = "img/instagram.svg", width = "24", height = "24")
+                            img(src = "img/icons/icon-instagram.svg", width = "24", height = "24")
                             p(class = "visually-hidden") Мы в Instagram
-    template(id = "config-template", style = "display:none")
-        h2(class = "config__error") Ошибка соединения!
-        div(class = "config__card card")
-            ul(class = "card__list")
-                li(class = "card__item card__item--cpu")
-                    p Процессор
-                    p(class = "card__cpu") Intel Xeon E5-1650v4 3.6 ГГц
-                li(class = "card__item card__item--hdd")
-                    p Жетский диск
-                    p(class = "card__hdd") 512 ГБ
-                li(class = "card__item card__item--ram")
-                    p Память
-                    p(class = "card__ram") 128 ГБ
-                li(class = "card__item card__item--price")
-                    p Цена
-                    p(class = "card__price") 12 000 ₽/мес.
-            a(class = "card__button button", href = "https://selectel.ru/", target = "_blank") Заказать
+        template(id = "config-template", style = "display:none")
+            h2(class = "config__error") Ошибка соединения!
+            div(class = "config__card card")
+                ul(class = "card__list")
+                    li(class = "card__item card__item--cpu")
+                        p Процессор
+                        p(class = "card__cpu") Intel Xeon E5-1650v4 3.6 ГГц
+                    li(class = "card__item card__item--hdd")
+                        p Жетский диск
+                        p(class = "card__hdd") 512 ГБ
+                    li(class = "card__item card__item--ram")
+                        p Память
+                        p(class = "card__ram") 128 ГБ
+                    li(class = "card__item card__item--price")
+                        p Цена
+                        p(class = "card__price") 12 000 ₽/мес.
+                a(class = "card__button button", href = "https://selectel.ru/", target = "_blank") Заказать
 
-    script(src = "js/slider.js")
-    script(src = "js/script.js")
+        script(src = "js/slider.js")
+        script(src = "js/script.js")
 
 
 

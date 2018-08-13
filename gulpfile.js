@@ -6,6 +6,7 @@ var autoprefixer = require("autoprefixer");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var pug = require("gulp-pug");
+var svgstore = require("gulp-svgstore");
 var browserSync = require("browser-sync").create();
 var useref = require("gulp-useref");
 var minify = require("gulp-uglify");
@@ -52,12 +53,12 @@ gulp.task("webp", function () {
 });
 
 gulp.task("sprite", function() {
-  return gulp.src("source/img/icon-*.svg")
+  return gulp.src("source/img/icons/icon-*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("source/img/icons"));
 });
 
 gulp.task("watch", ["browserSync", "stylus", "pug"], function () {
