@@ -3,8 +3,6 @@ var stylus = require("gulp-stylus");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-var imagemin = require("gulp-imagemin");
-var webp = require("gulp-webp");
 var pug = require("gulp-pug");
 var svgstore = require("gulp-svgstore");
 var browserSync = require("browser-sync").create();
@@ -35,21 +33,6 @@ gulp.task("pug", function buildHTML() {
        .pipe(plumber())
        .pipe(pug())
        .pipe(gulp.dest("source"))
-});
-
-gulp.task("image", function () {
-  return gulp.src("source/img/**/*.{png,jpg}")
-    .pipe(imagemin([
-      imagemin.optipng({optomisationLevel: 4}),
-      imagemin.jpegtran({progressive: true})
-    ]))
-    .pipe(gulp.dest("source/img/min-img"));
-});
-
-gulp.task("webp", function () {
-  return gulp.src("source/img/min-img/**/*.{png,jpg}")
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img/webp"))
 });
 
 gulp.task("sprite", function() {
