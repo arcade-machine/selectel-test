@@ -1,9 +1,10 @@
 const URL = "https://api.jsonbin.io/b/5b683d097b212953678c03dd";
 const configList = document.querySelector(".main-content__configs");
 const cardTemplate = document.querySelector("#config-template").querySelector(".card");
-const loader = configList.querySelector(".config__loader");
+const loader = configList.querySelector(".main-content__loader");
 const networkError = document.querySelector("#config-template").querySelector(".config__error");
 
+// создание запроса
 window.load = function() {
     var xhr = new XMLHttpRequest();
 
@@ -26,6 +27,7 @@ window.load = function() {
     xhr.send();
 };
 
+// добавление элементов на основании массива
 const onSuccess = function(card) {
     for (var i = 0; i < card.length; i++) {
         const cardGenerator = cardTemplate.cloneNode(true);
@@ -39,10 +41,12 @@ const onSuccess = function(card) {
     }
 };
 
+// сообщение об ошибке
 const onError = function (errorMessage) {
     configList.appendChild(errorMessage);
 };
 
+// иконка загрузки
 const removeLoader = function (loaderIcon) {
     configList.removeChild(loaderIcon);
 };
