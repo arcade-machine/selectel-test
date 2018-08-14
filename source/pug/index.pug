@@ -16,8 +16,6 @@ html(lang = "ru")
         link(type = "text/css", rel = "stylesheet", href = "css/styles.min.css")
         link(rel = "shortcut icon", type = "image/png", href = "img/favicon.png")
 
-
-        script(src="js/template.js")
         script(src="js/svg4everybody.min.js")
         script svg4everybody();
 
@@ -107,7 +105,7 @@ html(lang = "ru")
                             svg(width="24" height="24")
                                 use(xlink:href="img/icons/sprite.svg#icon-instagram")
                             p(class = "visually-hidden") Мы в Instagram
-        template(id = "config-template", style = "display:none")
+        div(id = "config-template", style = "display:none")
             h2(class = "config__error") Ошибка соединения!
             div(class = "config__card card")
                 ul(class = "card__list")
